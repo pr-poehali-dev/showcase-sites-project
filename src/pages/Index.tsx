@@ -97,8 +97,8 @@ const Index = () => {
             </div>
             <div className="animate-fade-in">
               <img
-                src="https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/dc09f565-6fc4-4837-8048-56deb46b08b4.jpg"
-                alt="Производство"
+                src="https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/51a3de8e-fda6-4331-99e2-2c78872d526a.jpg"
+                alt="Производство пильного полотна и заточка инструмента"
                 className="rounded-lg shadow-2xl w-full h-auto"
               />
             </div>
