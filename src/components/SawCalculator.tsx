@@ -2,7 +2,10 @@ import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useToast } from '@/hooks/use-toast';
 import Icon from '@/components/ui/icon';
 
 interface CalculatorResult {
@@ -17,6 +20,15 @@ const SawCalculator = () => {
   const [material, setMaterial] = useState('');
   const [thickness, setThickness] = useState('');
   const [result, setResult] = useState<CalculatorResult | null>(null);
+  const [showOrderForm, setShowOrderForm] = useState(false);
+  const [orderForm, setOrderForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    quantity: '',
+    comment: ''
+  });
+  const { toast } = useToast();
 
   const calculateBlade = () => {
     if (!material || !thickness) return;
@@ -129,6 +141,23 @@ const SawCalculator = () => {
     setMaterial('');
     setThickness('');
     setResult(null);
+    setShowOrderForm(false);
+    setOrderForm({
+      name: '',
+      phone: '',
+      email: '',
+      quantity: '',
+      comment: ''
+    });
+  };
+
+  const handleOrderSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: 'Заявка отправлена!',
+      description: 'Мы свяжемся с вами в ближайшее время для уточнения деталей и расчёта стоимости.',
+    });
+    resetCalculator();
   };
 
   return (
@@ -262,6 +291,96 @@ const SawCalculator = () => {
                       </div>
                     </CardContent>
                   </Card>
+                  
+                  {!showOrderForm ? (
+                    <Button 
+                      onClick={() => setShowOrderForm(true)}
+                      className="w-full h-12 bg-accent hover:bg-accent/90"
+                      size="lg"
+                    >
+                      <Icon name="ShoppingCart" size={20} className="mr-2" />
+                      Заказать с расчётом стоимости
+                    </Button>
+                  ) : (
+                    <Card className="border-2 border-accent/20">
+                      <CardHeader>
+                        <CardTitle className="text-xl">Заявка на расчёт стоимости</CardTitle>
+                        <CardDescription>
+                          Заполните форму и мы рассчитаем стоимость для вас
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <form onSubmit={handleOrderSubmit} className="space-y-4">
+                          <div>
+                            <Label htmlFor="name">Ваше имя *</Label>
+                            <Input
+                              id="name"
+                              value={orderForm.name}
+                              onChange={(e) => setOrderForm({...orderForm, name: e.target.value})}
+                              placeholder="Иван Иванов"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="phone">Телефон *</Label>
+                            <Input
+                              id="phone"
+                              type="tel"
+                              value={orderForm.phone}
+                              onChange={(e) => setOrderForm({...orderForm, phone: e.target.value})}
+                              placeholder="+7 (999) 123-45-67"
+                              required
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="email">Email</Label>
+                            <Input
+                              id="email"
+                              type="email"
+                              value={orderForm.email}
+                              onChange={(e) => setOrderForm({...orderForm, email: e.target.value})}
+                              placeholder="example@mail.ru"
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="quantity">Требуемое количество (м) *</Label>
+                            <Input
+                              id="quantity"
+                              type="number"
+                              value={orderForm.quantity}
+                              onChange={(e) => setOrderForm({...orderForm, quantity: e.target.value})}
+                              placeholder="10"
+                              required
+                              min="1"
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="comment">Комментарий</Label>
+                            <Textarea
+                              id="comment"
+                              value={orderForm.comment}
+                              onChange={(e) => setOrderForm({...orderForm, comment: e.target.value})}
+                              placeholder="Укажите дополнительные пожелания"
+                              rows={3}
+                            />
+                          </div>
+                          <div className="flex gap-3">
+                            <Button type="submit" className="flex-1 bg-accent hover:bg-accent/90">
+                              <Icon name="Send" size={18} className="mr-2" />
+                              Отправить заявку
+                            </Button>
+                            <Button 
+                              type="button" 
+                              variant="outline"
+                              onClick={() => setShowOrderForm(false)}
+                            >
+                              Отмена
+                            </Button>
+                          </div>
+                        </form>
+                      </CardContent>
+                    </Card>
+                  )}
                 </div>
               ) : (
                 <div className="h-full flex flex-col items-center justify-center text-center p-8 border-2 border-dashed rounded-lg">
