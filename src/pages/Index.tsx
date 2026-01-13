@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
+import SawCalculator from '@/components/SawCalculator';
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -63,6 +64,7 @@ const Index = () => {
             <a href="#home" className="text-foreground hover:text-accent transition-colors">Главная</a>
             <a href="#about" className="text-foreground hover:text-accent transition-colors">О компании</a>
             <a href="#products" className="text-foreground hover:text-accent transition-colors">Продукция</a>
+            <a href="#calculator" className="text-foreground hover:text-accent transition-colors">Калькулятор</a>
             <a href="#certificates" className="text-foreground hover:text-accent transition-colors">Сертификаты</a>
             <a href="#contacts" className="text-foreground hover:text-accent transition-colors">Контакты</a>
           </div>
@@ -210,7 +212,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="certificates" className="py-20 px-4">
+      <section id="calculator" className="py-20 px-4">
+        <div className="container mx-auto">
+          <SawCalculator />
+        </div>
+      </section>
+
+      <section id="certificates" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Сертификаты качества</h2>
