@@ -293,14 +293,27 @@ const SawCalculator = () => {
                   </Card>
                   
                   {!showOrderForm ? (
-                    <Button 
-                      onClick={() => setShowOrderForm(true)}
-                      className="w-full h-12 bg-accent hover:bg-accent/90"
-                      size="lg"
-                    >
-                      <Icon name="ShoppingCart" size={20} className="mr-2" />
-                      Заказать с расчётом стоимости
-                    </Button>
+                    <div className="space-y-3">
+                      <Button 
+                        onClick={() => setShowOrderForm(true)}
+                        className="w-full h-12 bg-accent hover:bg-accent/90"
+                        size="lg"
+                      >
+                        <Icon name="ShoppingCart" size={20} className="mr-2" />
+                        Заказать с расчётом стоимости
+                      </Button>
+                      <Button 
+                        asChild
+                        variant="outline"
+                        className="w-full h-12"
+                        size="lg"
+                      >
+                        <a href="tel:88002002848">
+                          <Icon name="Phone" size={20} className="mr-2" />
+                          Позвонить нам: 8(800)200-28-48
+                        </a>
+                      </Button>
+                    </div>
                   ) : (
                     <Card className="border-2 border-accent/20">
                       <CardHeader>

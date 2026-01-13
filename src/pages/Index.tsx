@@ -83,9 +83,11 @@ const Index = () => {
                 Производство пильного полотна для ленточных пил, заточка режущего инструмента и изготовление швейных столов
               </p>
               <div className="flex gap-4">
-                <Button size="lg" className="bg-accent hover:bg-accent/90">
-                  <Icon name="Phone" size={20} className="mr-2" />
-                  Позвонить
+                <Button size="lg" className="bg-accent hover:bg-accent/90" asChild>
+                  <a href="tel:88002002848">
+                    <Icon name="Phone" size={20} className="mr-2" />
+                    Позвонить
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline">
                   <Icon name="FileText" size={20} className="mr-2" />
@@ -289,7 +291,9 @@ const Index = () => {
                     <div>
                       <CardTitle className="text-lg">Телефон</CardTitle>
                       <CardDescription className="text-base mt-1">
-                        +7 (495) 123-45-67
+                        <a href="tel:88002002848" className="hover:text-accent transition-colors">
+                          8(800)200-28-48
+                        </a>
                       </CardDescription>
                     </div>
                   </div>
@@ -378,7 +382,7 @@ const Index = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Контакты</h3>
               <ul className="space-y-2 text-primary-foreground/80">
-                <li>+7 (495) 123-45-67</li>
+                <li><a href="tel:88002002848" className="hover:text-white transition-colors">8(800)200-28-48</a></li>
                 <li>info@tehnologiya.ru</li>
                 <li>г. Москва</li>
               </ul>
