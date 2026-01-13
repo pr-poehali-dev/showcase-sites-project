@@ -20,20 +20,20 @@ const Index = () => {
   const products = [
     {
       id: 1,
-      title: 'Промышленное оборудование',
-      description: 'Высокотехнологичное оборудование для автоматизации производственных процессов',
+      title: 'Пильное полотно для ленточных пил',
+      description: 'Производство высококачественного пильного полотна различных размеров для деревообработки',
       image: 'https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/929377ed-9907-4a95-941d-61765d7c1c55.jpg'
     },
     {
       id: 2,
-      title: 'Металлоконструкции',
-      description: 'Проектирование и изготовление металлоконструкций любой сложности',
+      title: 'Заточка режущего инструмента',
+      description: 'Профессиональная заточка строгальных ножей, дисковых пил, решёток для мясорубок, поварских ножей',
       image: 'https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/dc09f565-6fc4-4837-8048-56deb46b08b4.jpg'
     },
     {
       id: 3,
-      title: 'Компоненты и запчасти',
-      description: 'Производство высокоточных компонентов для различных отраслей промышленности',
+      title: 'Швейные столы',
+      description: 'Изготовление профессиональных швейных столов для ателье и швейных производств',
       image: 'https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/929377ed-9907-4a95-941d-61765d7c1c55.jpg'
     }
   ];
@@ -57,7 +57,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Icon name="Factory" size={32} className="text-accent" />
-            <span className="text-2xl font-bold text-primary">ПромТех</span>
+            <span className="text-2xl font-bold text-primary">Технология</span>
           </div>
           <div className="hidden md:flex gap-8">
             <a href="#home" className="text-foreground hover:text-accent transition-colors">Главная</a>
@@ -75,10 +75,10 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 leading-tight">
-                Производственные решения мирового класса
+                Пильное полотно и заточка инструмента
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Надежный партнер в производстве промышленного оборудования с 1993 года
+                Производство пильного полотна для ленточных пил, заточка режущего инструмента и изготовление швейных столов
               </p>
               <div className="flex gap-4">
                 <Button size="lg" className="bg-accent hover:bg-accent/90">
@@ -123,10 +123,10 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-6">О компании</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              ПромТех — ведущий производитель промышленного оборудования в России. 
-              За 30 лет работы мы реализовали более 500 крупных проектов для предприятий 
-              различных отраслей промышленности. Наша продукция соответствует международным 
-              стандартам качества и успешно эксплуатируется на территории РФ и стран СНГ.
+              Технология — специализированное производственное предприятие с многолетним опытом работы. 
+              Мы занимаемся производством пильного полотна для ленточных пил, профессиональной заточкой 
+              режущего инструмента (строгальные ножи, дисковые пилы, решётки для мясорубок, поварские ножи) 
+              и изготовлением швейных столов для швейного производства.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -139,8 +139,8 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Обеспечить российские предприятия современным высококачественным 
-                  оборудованием для повышения их конкурентоспособности
+                  Обеспечить предприятия деревообработки, общественного питания и швейного производства 
+                  качественным инструментом и оборудованием
                 </p>
               </CardContent>
             </Card>
@@ -153,8 +153,8 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Стать ведущим производителем промышленного оборудования 
-                  в Восточной Европе к 2030 году
+                  Стать надежным партнером для производственных предприятий, 
+                  предоставляя высококачественные услуги и продукцию
                 </p>
               </CardContent>
             </Card>
@@ -181,7 +181,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Наша продукция</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Широкий ассортимент промышленного оборудования и компонентов
+              Специализированные услуги и продукция для различных отраслей
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -296,7 +296,7 @@ const Index = () => {
                     <div>
                       <CardTitle className="text-lg">Email</CardTitle>
                       <CardDescription className="text-base mt-1">
-                        info@promtech.ru
+                        info@tehnologiya.ru
                       </CardDescription>
                     </div>
                   </div>
@@ -353,10 +353,10 @@ const Index = () => {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Icon name="Factory" size={32} />
-                <span className="text-2xl font-bold">ПромТех</span>
+                <span className="text-2xl font-bold">Технология</span>
               </div>
               <p className="text-primary-foreground/80">
-                Производственное предприятие полного цикла
+                Производство и обслуживание режущего инструмента
               </p>
             </div>
             <div>
@@ -371,7 +371,7 @@ const Index = () => {
               <h3 className="font-semibold text-lg mb-4">Контакты</h3>
               <ul className="space-y-2 text-primary-foreground/80">
                 <li>+7 (495) 123-45-67</li>
-                <li>info@promtech.ru</li>
+                <li>info@tehnologiya.ru</li>
                 <li>г. Москва</li>
               </ul>
             </div>
@@ -385,7 +385,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-            <p>© 2024 ПромТех. Все права защищены.</p>
+            <p>© 2024 Технология. Все права защищены.</p>
           </div>
         </div>
       </footer>
