@@ -23,19 +23,19 @@ const Index = () => {
       id: 1,
       title: 'Пильное полотно для ленточных пил',
       description: 'Производство высококачественного пильного полотна различных размеров для деревообработки',
-      image: 'https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/929377ed-9907-4a95-941d-61765d7c1c55.jpg'
+      image: 'https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/fe0c1996-835c-4378-adb3-0e512535ee46.jpg'
     },
     {
       id: 2,
       title: 'Заточка режущего инструмента',
       description: 'Профессиональная заточка строгальных ножей, дисковых пил, решёток для мясорубок, поварских ножей',
-      image: 'https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/dc09f565-6fc4-4837-8048-56deb46b08b4.jpg'
+      image: 'https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/6943d110-8860-42ef-a844-25d40875865a.jpg'
     },
     {
       id: 3,
       title: 'Швейные столы',
       description: 'Изготовление профессиональных швейных столов для ателье и швейных производств',
-      image: 'https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/929377ed-9907-4a95-941d-61765d7c1c55.jpg'
+      image: 'https://cdn.poehali.dev/projects/74bb08e9-a4eb-4380-a5d9-ebc0810344c0/files/b1154a21-5da8-4894-b38a-8e9981c2f2da.jpg'
     }
   ];
 
