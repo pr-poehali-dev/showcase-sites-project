@@ -220,6 +220,162 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="reviews" className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-primary mb-4">Отзывы наших клиентов</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Более 200 предприятий доверяют нам свой режущий инструмент
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="border-2 hover:border-accent/50 transition-all">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={18} className="fill-accent text-accent" />
+                    ))}
+                  </div>
+                </div>
+                <CardTitle className="text-lg">ООО "МебельПром"</CardTitle>
+                <CardDescription>Деревообрабатывающее производство</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Сотрудничаем более 5 лет. Качество пильного полотна на высоте — служит долго, 
+                  рез чистый. Особенно радует оперативность изготовления под наши размеры.
+                </p>
+                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="User" size={16} />
+                  <span>Дмитрий Соколов, директор</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-accent/50 transition-all">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={18} className="fill-accent text-accent" />
+                    ))}
+                  </div>
+                </div>
+                <CardTitle className="text-lg">Ресторан "Прованс"</CardTitle>
+                <CardDescription>Общественное питание</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Регулярно отдаём поварские ножи и решётки для мясорубок на заточку. 
+                  Результат всегда превосходный! Ножи как новые, режут идеально. Рекомендуем.
+                </p>
+                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="User" size={16} />
+                  <span>Ольга Петрова, шеф-повар</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-accent/50 transition-all">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={18} className="fill-accent text-accent" />
+                    ))}
+                  </div>
+                </div>
+                <CardTitle className="text-lg">Швейная фабрика "Стиль"</CardTitle>
+                <CardDescription>Текстильное производство</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Заказали 15 швейных столов для нового цеха. Качество изготовления отличное, 
+                  столы удобные и функциональные. Швеи довольны!
+                </p>
+                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="User" size={16} />
+                  <span>Анна Михайлова, управляющая</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-accent/50 transition-all">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={18} className="fill-accent text-accent" />
+                    ))}
+                  </div>
+                </div>
+                <CardTitle className="text-lg">ИП Кузнецов</CardTitle>
+                <CardDescription>Столярная мастерская</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Профессиональный подход! Помогли подобрать правильное полотно для моей пилы. 
+                  Работает уже полгода без проблем. Цены адекватные.
+                </p>
+                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="User" size={16} />
+                  <span>Александр Кузнецов, владелец</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-accent/50 transition-all">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={18} className="fill-accent text-accent" />
+                    ))}
+                  </div>
+                </div>
+                <CardTitle className="text-lg">Мясокомбинат "Сибирь"</CardTitle>
+                <CardDescription>Мясоперерабатывающее предприятие</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Закупаем пильное полотно для разделки туш. Качество отменное, режет мясо и кости 
+                  без проблем. Заточка решёток тоже на высоте.
+                </p>
+                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="User" size={16} />
+                  <span>Игорь Волков, зам. директора</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-accent/50 transition-all">
+              <CardHeader>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={18} className="fill-accent text-accent" />
+                    ))}
+                  </div>
+                </div>
+                <CardTitle className="text-lg">Лесопилка "Урал"</CardTitle>
+                <CardDescription>Деревообработка</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Постоянно заказываем полотна для ленточных пил. Работают безотказно, 
+                  не рвутся. Доставка точно в срок. Спасибо за надёжность!
+                </p>
+                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="User" size={16} />
+                  <span>Виктор Смирнов, мастер цеха</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="certificates" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
